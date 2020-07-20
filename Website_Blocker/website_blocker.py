@@ -11,12 +11,12 @@ import time #importing time libraries for to get the time
 from datetime import datetime as dt 
 
 #hosts_path="/etc/hosts"
-hosts_path= "C:\Windows\System32\drivers\etc\hosts"
+hosts_path= r"C:\Windows\System32\drivers\etc\hosts"
 redirect="127.0.0.1"
-website_list=["https://www.facebook.com/","facebook.com","youtube.com","https://www.youtube.com/"] # The url of the websites to be blocked
+website_list=["www.facebook.com","facebook.com","youtube.com","www.youtube.com"] # The url of the websites to be blocked
 
 while True:
-    if dt(dt.now().year,dt.now().month,dt.now().day,8) < dt.now() < dt(dt.now().year,dt.now().month,dt.now().day,16): # My time for working productive is from 8am to 4pm. you can change time
+    if dt(dt.now().year,dt.now().month,dt.now().day,9) < dt.now() < dt(dt.now().year,dt.now().month,dt.now().day,15): # My time for working productive is from 9am to 3pm. you can change time
         print("Working hours...")
         with open(hosts_path,'r+') as file: # opening the host file
             content=file.read()  # reading the content inside the file and storing inside content variable
